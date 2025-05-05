@@ -1,0 +1,78 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story</title>
+  <link rel="stylesheet" href="style.css">
+  <script id="confettiLib" src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer></script>
+</head>
+<body>
+  <section id="intro">
+    <h1>To My Beautiful Angel <span>"Hanonti"</span> </h1>
+    <p>Scroll down to read our story...</p>
+    <div class="intro-buttons">
+      <button id="revealBtn">Reveal Our Story</button>
+      <button id="giftBtn">Birthday Gift</button>
+    </div>
+  </section>
+
+  <div class="container" id="storySection">
+    <h1 class="story-heading">Our Lovely Story</h1>
+
+    <section class="chapter" id="chapter1">
+      <h2>Chapter 1: When We Met</h2>
+      <div class="content">
+        <p>From the moment we first spoke, something clicked. You made me laugh, listened to my dreams, and I knew this was special.</p>
+        <button id="showMomentsBtn">Our Moments</button>
+        <div class="slider-container" id="sliderContainer">
+          <div class="slider">
+            <div class="slides">
+              <img src="photo1.jpg" alt="Moment 1">
+              <img src="photo2.jpg" alt="Moment 2">
+              <img src="photo3.jpg" alt="Moment 3">
+            </div>
+            <div class="slider-nav">
+              <button id="prev">❮ Prev</button>
+              <button id="next">Next ❯</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter locked">
+      <h2>Chapter 2: Engagement</h2>
+      <div class="content"><p>Remember that magical day when we promised forever?</p></div>
+      <div class="locked-overlay">🔒 Very Soon</div>
+    </section>
+    <section class="chapter locked">
+      <h2>Chapter 3: Married Life</h2>
+      <div class="content"><p>Our wedding day was the beginning of our beautiful journey as partners.</p></div>
+      <div class="locked-overlay">🔒 Very Soon</div>
+    </section>
+    <section class="chapter locked">
+      <h2>Chapter 4: Family &amp; Beyond</h2>
+      <div class="content"><p>One day we'll have laughter of little feet and build our dreams together.</p></div>
+      <div class="locked-overlay">🔒 Very Soon</div>
+    </section>
+
+    <section id="giftSection">
+      <h2>Birthday Gift</h2>
+      <button id="openGiftBtn">Open Gift</button>
+      <p id="giftMessage">Surprise! Happy birthday my lovely babygirl❤️ <br>
+      This is your first birthday with me and I wish it will continue till my last breath. Love you from the deepest part of my heart and wish you all the luck. I made this 
+        website to save every moment between us and also to remember our goal, which is being just for each other as a wife and husband. everytime we do something new I'll save 
+        it here till we finish our four chapters and have our little babies. We will make our story step by step together as we like with all we have, love moments, sad ones, 
+        hard time, all we face are memories and we must save it forever. I hope you like it, I really made this with all my love, althoug that's not alot but you always deserve 
+        the best Hanonti. Love you forever.... <br>
+        Your man<br>
+        Ziko
+      </p>
+    </section>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

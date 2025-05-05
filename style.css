@@ -1,0 +1,199 @@
+ body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fcefee, #fdf6f0);
+      color: #333;
+      overflow-x: hidden;
+      background: #ede8e8;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      color: #fff;
+      animation: fadeInUp 1s ease;
+    }
+    #intro h1 { font-size: 3em; margin: 0.2em; }
+    #intro h1 span{ color: #d98686; }
+    #intro p { margin: 0.5em 0; }
+    .intro-buttons {
+      display: flex;
+      gap: 1em;
+      margin-top: 1em;
+    }
+    .intro-buttons button {
+      padding: 0.8em 1.5em;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      background: #fff;
+      color: #ff9a9e;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .intro-buttons button:hover {
+      transform: scale(1.05);
+    }
+ .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2em 1em;
+    }
+    .story-heading {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1em;
+      animation: fadeInUp 0.8s ease;
+      animation-delay: 0.3s;
+      color: #4a4848;
+    }
+    .chapter {
+      background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      transition: transform 0.3s;
+      position: relative;
+    }
+    .chapter:hover { transform: translateY(-5px); }
+    .chapter h2 {
+      background: #ff9a9e;
+      color: #fff;
+      margin: 0;
+      padding: 1em;
+      position: relative;
+      z-index: 2;
+    }
+    .chapter.locked .content {
+      filter: blur(5px);
+    }
+    .chapter.locked h2 {
+      filter: none;
+    }
+    .content { padding: 1em; }
+    .content p { font-size: 1em; line-height: 1.5; }
+    .slider-container {
+      display: none;
+      margin-top: 1em;
+    }
+ .slider {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease;
+    }
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+    .slider-nav {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .slider-nav button {
+      background: #ff9a9e;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 20px;
+      cursor: pointer;
+      color: #fff;
+      font-weight: bold;
+    }
+  .locked-overlay {
+      position: absolute;
+      top: 4em;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      color: #555;
+      text-shadow: 0 0 5px #fff;
+    }
+    #giftSection {
+      display: none;
+      padding: 4em 1em 6em;
+      text-align: center;
+      animation: fadeInUp 1s ease;
+    }
+    #giftSection h2 {
+      margin: 0;
+      font-size: 2em;
+      color: #d6336c;
+    }
+    #giftSection button {
+      margin-top: 1em;
+      padding: 0.8em 1.5em;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      background: #d6336c;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #giftSection button:hover {
+      transform: scale(1.05);
+    }
+    #giftMessage {
+      display: none;
+      margin-top: 1em;
+      font-size: 1.2em;
+      color: #333;
+    }
+ 
+      border: none;
+      border-radius: 30px;
+      background: #d6336c;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #giftSection button:hover {
+      transform: scale(1.05);
+    }
+    #giftMessage {
+      display: none;
+      margin-top: 1em;
+      font-size: 1.2em;
+      color: #333;
+    }
+       @media (max-width: 768px) {
+      #intro h1 { font-size: 2em; }
+      .intro-buttons button { font-size: 1em; padding: 0.6em 1em; }
+      .chapter h2 { font-size: 1.2em; padding: 0.8em; }
+      .content p { font-size: 0.95em; }
+      #giftSection h2 { font-size: 1.6em; }
+      #giftSection button { font-size: 1em; padding: 0.6em 1em; }
+    }
+    @media (max-width: 480px) {
+      .slides { flex-direction: column; height: auto; }
+      .slides img { height: auto; max-height: 250px; }
+      .slider { height: auto; }
