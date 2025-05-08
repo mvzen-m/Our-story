@@ -7,10 +7,33 @@
       const showBtn = document.getElementById('showMomentsBtn');
       const sliderContainer = document.getElementById('sliderContainer');
       const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
       const nextBtn = document.getElementById('next');
       const prevBtn = document.getElementById('prev');
 
       let idx = 0;
+
+    function updateSlider() {
+  const slideWidth = images[0].clientWidth;
+  slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < images.length - 1) {
+    currentIndex++;
+    updateSlider();
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlider();
+  }
+});
+
+// Optional: Resize fix
+window.addEventListener('resize', updateSlider);
 
       if (revealBtn) {
         revealBtn.addEventListener('click', () => {
