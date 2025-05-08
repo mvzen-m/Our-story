@@ -87,3 +87,7 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+document.getElementById('showMomentsBtn').addEventListener('click', () => {
+  const sliderContainer = document.getElementById('sliderContainer');
+  sliderContainer.style.display = sliderContainer.style.display === 'none' ? 'block' : 'none';
+});
