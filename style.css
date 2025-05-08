@@ -84,25 +84,31 @@
     }
     .content { padding: 1em; }
     .content p { font-size: 1em; line-height: 1.5; }
-    .slider-container {
-      display: none;
-      margin-top: 1em;
-    }
+.slider-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
 .slides {
   display: flex;
+  transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
 .slides img {
   width: 100%;
-  height: auto;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
-    .slides {
-      display: flex;
-      width: 300%;
-      transition: transform 0.5s ease;
-    }
     .slider-nav {
       position: absolute;
       bottom: 10px;
