@@ -145,6 +145,10 @@
       color: #555;
       text-shadow: 0 0 5px #fff;
     }
+#sliderContainer {
+  display: none;
+}
+
     #giftSection {
       display: none;
       padding: 4em 1em 6em;
