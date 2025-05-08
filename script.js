@@ -78,3 +78,12 @@ window.addEventListener('resize', updateSlider);
         });
       }
     });
+document.addEventListener('keydown', (e) => {
+  if (!document.getElementById('sliderContainer').classList.contains('hidden')) {
+    if (e.key === 'ArrowRight') {
+      document.getElementById('next').click();
+    } else if (e.key === 'ArrowLeft') {
+      document.getElementById('prev').click();
+    }
+  }
+});
