@@ -88,18 +88,16 @@
       display: none;
       margin-top: 1em;
     }
- .slider {
+.slides {
+  display: flex;
   width: 100%;
-  height: auto; /* Let it expand naturally */
-  overflow: hidden;
 }
 
-.slider img {
+.slides img {
   width: 100%;
   height: auto;
-  object-fit: contain; /* Or remove this if unnecessary */
-  display: block;
 }
+
     .slides {
       display: flex;
       width: 300%;
